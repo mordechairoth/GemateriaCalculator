@@ -1,0 +1,15 @@
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\bin\Debug\netcoreapp3.1\GemateriaAssignment.exe
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\bin\Debug\netcoreapp3.1\GemateriaAssignment.deps.json
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\bin\Debug\netcoreapp3.1\GemateriaAssignment.runtimeconfig.json
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\bin\Debug\netcoreapp3.1\GemateriaAssignment.runtimeconfig.dev.json
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\bin\Debug\netcoreapp3.1\GemateriaAssignment.dll
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\bin\Debug\netcoreapp3.1\GemateriaAssignment.pdb
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.csprojAssemblyReference.cache
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.csproj.GenerateResource.cache
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.AssemblyInfoInputs.cache
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.AssemblyInfo.cs
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.csproj.CoreCompileInputs.cache
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.dll
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.pdb
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.genruntimeconfig.cache
+C:\Users\mroth\source\repos\GemateriaAssignment\GemateriaAssignment\obj\Debug\netcoreapp3.1\GemateriaAssignment.MainWindow.resources

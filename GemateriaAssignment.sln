@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GemateriaAssignment", "GemateriaAssignment\GemateriaAssignment.csproj", "{0D9F5C14-B10C-4EF2-8254-D0011D2F2549}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GemateriaTests", "GemateriaTests\GemateriaTests.csproj", "{A4AF7ADE-CCA3-4B5D-87CB-6DA6DDF8469E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D9F5C14-B10C-4EF2-8254-D0011D2F2549}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D9F5C14-B10C-4EF2-8254-D0011D2F2549}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D9F5C14-B10C-4EF2-8254-D0011D2F2549}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D9F5C14-B10C-4EF2-8254-D0011D2F2549}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4AF7ADE-CCA3-4B5D-87CB-6DA6DDF8469E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4AF7ADE-CCA3-4B5D-87CB-6DA6DDF8469E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4AF7ADE-CCA3-4B5D-87CB-6DA6DDF8469E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4AF7ADE-CCA3-4B5D-87CB-6DA6DDF8469E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {21727843-6AD0-4B84-BD3A-87A4FFA8A0FD}
+	EndGlobalSection
+EndGlobal
