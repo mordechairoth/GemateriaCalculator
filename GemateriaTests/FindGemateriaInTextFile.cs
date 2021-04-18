@@ -34,6 +34,7 @@ namespace GemateriaTests
                 3,
                 3,
                 1,
+                10,
                 10
             };
             int sum = 10;
@@ -46,7 +47,8 @@ namespace GemateriaTests
                 {6,2 },
                 {9, 1 },
                 {10, 4 },
-                {14, 1 }
+                {14, 1 },
+                {15, 1 }
             };
 
             bool dictsAreEqual = expected.Count == indexCountDict.Count && !expected.Except(indexCountDict).Any();

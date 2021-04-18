@@ -7,6 +7,12 @@ namespace GemateriaAssignment.FindMatches
 {
     public class FindGemateriaMathces
     {
+        /// <summary>
+        /// Returns all instances of consecutive numbers that add up to a sum
+        /// </summary>
+        /// <param name="numbers"></param>
+        /// <param name="sum"></param>
+        /// <returns></returns>
         public Dictionary<int, int> GetAllSums(IEnumerable<int> numbers, int sum)
         {
             Dictionary<int, int> indexCount = new Dictionary<int, int>();
@@ -14,7 +20,6 @@ namespace GemateriaAssignment.FindMatches
             List<int> cachedNumbers = new List<int>();
             int startIndex = 0;
             int finishIndex = -1;
-            
 
             foreach (var number in numbers)
             {
