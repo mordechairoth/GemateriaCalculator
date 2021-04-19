@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
+using GemateriaAssignment.Calculator;
 
 namespace GemateriaAssignment.FindMatches
 {
@@ -31,8 +32,9 @@ namespace GemateriaAssignment.FindMatches
                     if (cachedNumbers.Count == 1)
                     {
                         startIndex = finishIndex + 1;
+                        cachedNumbers.Clear();
                     }
-                    else if (cachedNumbers.Count() > 1)
+                    else if (cachedNumbers.Count > 1)
                     {
                         int cachedNumbersCount = cachedNumbers.Count();
                         for (var i = 0; i < cachedNumbersCount; i++)
@@ -97,9 +99,61 @@ namespace GemateriaAssignment.FindMatches
             return indexCount;
         }
 
-        public string ConvertHebrewTextToGemateria(string hebrewText)
+        public IEnumerable<string> GetAllInctancesOfGemateriaInFile(string folderPath, int sum)
         {
-            throw new NotImplementedException();
+            string numberFile = File.ReadAllText(folderPath + "\\numbers.txt");
+            Dictionary<int, int> indexCount = GetGemateriaPositionsInText(numberFile, sum);
+            string hebrewTextFile = File.ReadAllText(folderPath + "\\hebrew.txt");
+
+            return GetTextFromDict(hebrewTextFile, indexCount);
         }
+
+        public IEnumerable<string> GetTextFromDict(string hebrewText, Dictionary<int, int> indexCount)
+        {
+            string[] splitString = hebrewText.Split(new[]{' ', '\n' }, StringSplitOptions.RemoveEmptyEntries);
+            List<string> result = new List<string>();
+
+            foreach (var pair in indexCount)
+            {
+                string match = string.Join(' ', splitString, pair.Key, pair.Value );
+                result.Add(match);
+            }
+
+            return result;
+        }
+
+        public Dictionary<int, int> GetGemateriaPositionsInText(string numbersAsText, int sum)
+        {
+            IEnumerable<int> numbers = numbersAsText.Split(" ", StringSplitOptions.RemoveEmptyEntries).Select(x => int.Parse(x));
+            return GetAllSums(numbers, sum);
+        }
+
+        public string ConvertHebrewTextToNumericValue(string hebrewText)
+        {
+            var gemateriaCalc = new GemateriaCalculator();
+            hebrewText = hebrewText.Replace("\n", " ");
+            var words = hebrewText.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+            List<int> wordsAsNumbers = new List<int>();
+            string numbersAsText = "";
+            foreach (var word in words)
+            {
+                wordsAsNumbers.Add((int)gemateriaCalc.CalculateGemateria(word));
+            }
+
+            foreach (var number in wordsAsNumbers)
+            {
+                numbersAsText += number + " ";
+            }
+            numbersAsText = numbersAsText.Remove(numbersAsText.Length - 1);
+            return numbersAsText;
+        }
+
+        public void CreateGemateriaFileFromHebrewTextFile(string folderPath)
+        {
+            string hebrewText = File.ReadAllText(folderPath + "\\hebrew.txt");
+            string textAsGemateriaNumbers = ConvertHebrewTextToNumericValue(hebrewText);
+            File.WriteAllText(folderPath + "\\numbers.txt", textAsGemateriaNumbers);
+        }
+
     }
 }
