@@ -87,18 +87,18 @@ namespace GemateriaTests
         [Test]
         public void Get_All_Instances_Of_Gemteria_In_File()
         {
-            string folderPath = @"c:\users\morde\desktop\test";
-            string[] expected = new string[] {"י", "הה" };
-            int sum = 10;
+            string folderPath = @"C:\Users\morde\Desktop\torahText\bereishis";
+            string[] expected = new string[] { "החשך ויקרא אלהים לאור יום" };
+            int sum = 1029;
             string[] result = findGemateriaInTextFile.GetAllInctancesOfGemateriaInFile(folderPath, sum).ToArray();
 
-            Assert.AreEqual(expected, result);
+            Assert.AreEqual(expected[0], result[0]);
         }
 
         [Test]
         public void Create_Number_File_From_Hebrew_Text()
         {
-            string folderPath = @"c:\users\morde\desktop\test";
+            string folderPath = @"C:\Users\morde\Desktop\torahText\devarim";
             findGemateriaInTextFile.CreateGemateriaFileFromHebrewTextFile(folderPath);
 
             Assert.IsTrue(File.Exists(folderPath + "\\numbers.txt"));
