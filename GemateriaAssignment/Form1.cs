@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GemateriaAssignment.FindMatches;
 
 namespace GemateriaAssignment
 {
@@ -48,6 +49,23 @@ namespace GemateriaAssignment
         private void inputTextBox_TextChanged(object sender, EventArgs e)
         {
             hebrewPhrase = inputTextBox.Text;
+        }
+
+        private void findMatchesInTorahButton_Click(object sender, EventArgs e)
+        {
+            long sum = gemateriaCalculator.CalculateGemateria(hebrewPhrase);
+            numberResultTextBox.Text = sum.ToString();
+
+            GemateriaFromTorahCalculator torahCalculator = new GemateriaFromTorahCalculator();
+            var matches = torahCalculator.GetAllGematrios((int)sum).Distinct();
+            resultAmountLabel.Text = matches.Count().ToString();
+            torahMatchesListBox.Items.Clear();
+
+            foreach (var match in matches)
+            {
+                torahMatchesListBox.Items.Add(match);
+            }
+
         }
     }
 }

@@ -13,10 +13,11 @@ namespace GemateriaAssignment.FindMatches
         public IEnumerable<string> GetAllGematrios(int sum)
         {
             string filePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\torah";
-            
+
+            Directory.CreateDirectory(filePath);
             WriteResourceToFile("GemateriaAssignment.TorahText.Torah.numbers.txt", filePath + "\\numbers.txt");
             WriteResourceToFile("GemateriaAssignment.TorahText.Torah.hebrew.txt", filePath + "\\hebrew.txt");
-
+            CleanUpHebrewText(filePath + "\\hebrew.txt");
             FindGemateriaMatches gemateriaMatches = new FindGemateriaMatches();
 
             IEnumerable<string> matches = gemateriaMatches.GetAllInctancesOfGemateriaInFile(filePath, sum);
@@ -25,6 +26,12 @@ namespace GemateriaAssignment.FindMatches
             
         }
 
+        private void  CleanUpHebrewText(string filePath)
+        {
+            string text = File.ReadAllText(filePath);
+            text = text.Replace("\r", " ");
+            File.WriteAllText(filePath, text);
+        }
         private void WriteResourceToFile(string resourceName, string filePath)
         {
            
