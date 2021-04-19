@@ -96,5 +96,10 @@ namespace GemateriaAssignment.FindMatches
             
             return indexCount;
         }
+
+        public string ConvertHebrewTextToGemateria(string hebrewText)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

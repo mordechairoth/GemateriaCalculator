@@ -55,5 +55,16 @@ namespace GemateriaTests
 
             Assert.IsTrue(dictsAreEqual);
         }
+
+        [Test]
+        public void Convert_All_Hebrew_Text_To_Gemateria()
+        {
+            string hebrewText = "אני עבדך בן עמתך";
+            string textAsGemateria = "61 96 52 530";
+
+            string result = findGemateriaInTextFile.ConvertHebrewTextToGemateria(hebrewText);
+
+            Assert.AreEqual(textAsGemateria, result);
+        }
     }
 }
