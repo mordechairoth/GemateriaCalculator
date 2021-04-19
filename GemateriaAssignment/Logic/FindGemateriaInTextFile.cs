@@ -5,7 +5,7 @@ using System.Text;
 
 namespace GemateriaAssignment.FindMatches
 {
-    public class FindGemateriaMathces
+    public class FindGemateriaMatches
     {
         /// <summary>
         /// Returns all instances of consecutive numbers that add up to a sum

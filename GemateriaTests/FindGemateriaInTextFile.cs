@@ -8,11 +8,11 @@ namespace GemateriaTests
 {
     class FindGemateriaInTextFileTests
     {
-        FindGemateriaMathces findGemateriaInTextFile;
+        FindGemateriaMatches findGemateriaInTextFile;
         [SetUp]
         public void Setup()
         {
-            findGemateriaInTextFile = new FindGemateriaMathces();
+            findGemateriaInTextFile = new FindGemateriaMatches();
         }
 
         [Test]
