@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using GemateriaAssignment.FindMatches;
+using GemateriaAssignment.Calculator;
 
 namespace GemateriaTests
 {
@@ -102,6 +103,20 @@ namespace GemateriaTests
             findGemateriaInTextFile.CreateGemateriaFileFromHebrewTextFile(folderPath);
 
             Assert.IsTrue(File.Exists(folderPath + "\\numbers.txt"));
+        }
+
+        [Test]
+        public void Get_All_Equal_Words_From_Torah_Test()
+        {
+            int sum = 20000;
+            GemateriaFromTorahCalculator torahFinder = new GemateriaFromTorahCalculator();
+            IEnumerable<string> result = torahFinder.GetAllGematrios(sum);
+
+            foreach (var str in result)
+            {
+                long total = new GemateriaCalculator().CalculateGemateria(str);
+                Assert.AreEqual(sum, (int)total);
+            }
         }
     }
 }
