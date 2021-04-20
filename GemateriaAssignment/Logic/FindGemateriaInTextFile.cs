@@ -76,8 +76,8 @@ namespace GemateriaAssignment.FindMatches
 
         public IEnumerable<string> GetTextFromDict(string hebrewText, Dictionary<int, int> indexCount)
         {
-            string[] splitString = hebrewText.Split(new[]{' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
             List<string> result = new List<string>();
+            string[] splitString = hebrewText.Split(new[]{' ', '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var pair in indexCount)
             {
