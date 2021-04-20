@@ -35,7 +35,6 @@ namespace GemateriaAssignment.FindMatches
         }
         private void WriteResourceToFile(string resourceName, string filePath)
         {
-           
             using (var resource = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
             {
                 using (var file = new FileStream(filePath, FileMode.Create, FileAccess.Write))
