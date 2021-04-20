@@ -44,26 +44,29 @@ namespace GemateriaAssignment
             // 
             // inputTextBox
             // 
-            this.inputTextBox.Location = new System.Drawing.Point(360, 62);
+            this.inputTextBox.Location = new System.Drawing.Point(411, 83);
+            this.inputTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.inputTextBox.Name = "inputTextBox";
             this.inputTextBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.inputTextBox.Size = new System.Drawing.Size(519, 23);
+            this.inputTextBox.Size = new System.Drawing.Size(593, 27);
             this.inputTextBox.TabIndex = 0;
             this.inputTextBox.TextChanged += new System.EventHandler(this.inputTextBox_TextChanged);
             // 
             // numberResultTextBox
             // 
-            this.numberResultTextBox.Location = new System.Drawing.Point(744, 114);
+            this.numberResultTextBox.Location = new System.Drawing.Point(850, 152);
+            this.numberResultTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numberResultTextBox.Name = "numberResultTextBox";
-            this.numberResultTextBox.Size = new System.Drawing.Size(135, 23);
+            this.numberResultTextBox.Size = new System.Drawing.Size(154, 27);
             this.numberResultTextBox.TabIndex = 1;
             // 
             // withKollelCheckBox
             // 
             this.withKollelCheckBox.AutoSize = true;
-            this.withKollelCheckBox.Location = new System.Drawing.Point(360, 91);
+            this.withKollelCheckBox.Location = new System.Drawing.Point(411, 121);
+            this.withKollelCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.withKollelCheckBox.Name = "withKollelCheckBox";
-            this.withKollelCheckBox.Size = new System.Drawing.Size(83, 19);
+            this.withKollelCheckBox.Size = new System.Drawing.Size(104, 24);
             this.withKollelCheckBox.TabIndex = 2;
             this.withKollelCheckBox.Text = "With Kollel";
             this.withKollelCheckBox.UseVisualStyleBackColor = true;
@@ -72,9 +75,10 @@ namespace GemateriaAssignment
             // isMisparKutenCheckBox
             // 
             this.isMisparKutenCheckBox.AutoSize = true;
-            this.isMisparKutenCheckBox.Location = new System.Drawing.Point(360, 118);
+            this.isMisparKutenCheckBox.Location = new System.Drawing.Point(411, 157);
+            this.isMisparKutenCheckBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.isMisparKutenCheckBox.Name = "isMisparKutenCheckBox";
-            this.isMisparKutenCheckBox.Size = new System.Drawing.Size(96, 19);
+            this.isMisparKutenCheckBox.Size = new System.Drawing.Size(118, 24);
             this.isMisparKutenCheckBox.TabIndex = 3;
             this.isMisparKutenCheckBox.Text = "Mispar Kuten";
             this.isMisparKutenCheckBox.UseVisualStyleBackColor = true;
@@ -82,9 +86,10 @@ namespace GemateriaAssignment
             // 
             // calculateGemateriaButton
             // 
-            this.calculateGemateriaButton.Location = new System.Drawing.Point(654, 165);
+            this.calculateGemateriaButton.Location = new System.Drawing.Point(789, 220);
+            this.calculateGemateriaButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.calculateGemateriaButton.Name = "calculateGemateriaButton";
-            this.calculateGemateriaButton.Size = new System.Drawing.Size(75, 23);
+            this.calculateGemateriaButton.Size = new System.Drawing.Size(86, 31);
             this.calculateGemateriaButton.TabIndex = 4;
             this.calculateGemateriaButton.Text = "Calculate Gemateria";
             this.calculateGemateriaButton.UseVisualStyleBackColor = true;
@@ -93,9 +98,9 @@ namespace GemateriaAssignment
             // inputLabel
             // 
             this.inputLabel.AutoSize = true;
-            this.inputLabel.Location = new System.Drawing.Point(514, 31);
+            this.inputLabel.Location = new System.Drawing.Point(587, 41);
             this.inputLabel.Name = "inputLabel";
-            this.inputLabel.Size = new System.Drawing.Size(195, 15);
+            this.inputLabel.Size = new System.Drawing.Size(246, 20);
             this.inputLabel.TabIndex = 5;
             this.inputLabel.Text = "Enter Phrase to Calculate Gemateria";
             // 
@@ -103,19 +108,20 @@ namespace GemateriaAssignment
             // 
             this.numberResultLabel.AutoSize = true;
             this.numberResultLabel.Enabled = false;
-            this.numberResultLabel.Location = new System.Drawing.Point(690, 117);
+            this.numberResultLabel.Location = new System.Drawing.Point(789, 156);
             this.numberResultLabel.Name = "numberResultLabel";
-            this.numberResultLabel.Size = new System.Drawing.Size(39, 15);
+            this.numberResultLabel.Size = new System.Drawing.Size(49, 20);
             this.numberResultLabel.TabIndex = 6;
             this.numberResultLabel.Text = "Result";
             // 
             // findMatchesInTorahButton
             // 
-            this.findMatchesInTorahButton.Location = new System.Drawing.Point(390, 165);
+            this.findMatchesInTorahButton.Location = new System.Drawing.Point(411, 220);
+            this.findMatchesInTorahButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.findMatchesInTorahButton.Name = "findMatchesInTorahButton";
-            this.findMatchesInTorahButton.Size = new System.Drawing.Size(75, 23);
+            this.findMatchesInTorahButton.Size = new System.Drawing.Size(212, 31);
             this.findMatchesInTorahButton.TabIndex = 7;
-            this.findMatchesInTorahButton.Text = "Find Matches in Torah";
+            this.findMatchesInTorahButton.Text = "Find All Matches in Torah";
             this.findMatchesInTorahButton.UseMnemonic = false;
             this.findMatchesInTorahButton.UseVisualStyleBackColor = true;
             this.findMatchesInTorahButton.Click += new System.EventHandler(this.findMatchesInTorahButton_Click);
@@ -123,35 +129,36 @@ namespace GemateriaAssignment
             // torahMatchesListBox
             // 
             this.torahMatchesListBox.FormattingEnabled = true;
-            this.torahMatchesListBox.ItemHeight = 15;
-            this.torahMatchesListBox.Location = new System.Drawing.Point(21, 208);
+            this.torahMatchesListBox.ItemHeight = 20;
+            this.torahMatchesListBox.Location = new System.Drawing.Point(24, 277);
+            this.torahMatchesListBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.torahMatchesListBox.Name = "torahMatchesListBox";
             this.torahMatchesListBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.torahMatchesListBox.Size = new System.Drawing.Size(1167, 319);
+            this.torahMatchesListBox.Size = new System.Drawing.Size(1333, 424);
             this.torahMatchesListBox.TabIndex = 8;
             // 
             // resultLabel
             // 
             this.resultLabel.AutoSize = true;
-            this.resultLabel.Location = new System.Drawing.Point(38, 173);
+            this.resultLabel.Location = new System.Drawing.Point(43, 231);
             this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(47, 15);
+            this.resultLabel.Size = new System.Drawing.Size(58, 20);
             this.resultLabel.TabIndex = 9;
             this.resultLabel.Text = "Results:";
             // 
             // resultAmountLabel
             // 
             this.resultAmountLabel.AutoSize = true;
-            this.resultAmountLabel.Location = new System.Drawing.Point(81, 173);
+            this.resultAmountLabel.Location = new System.Drawing.Point(93, 231);
             this.resultAmountLabel.Name = "resultAmountLabel";
-            this.resultAmountLabel.Size = new System.Drawing.Size(0, 15);
+            this.resultAmountLabel.Size = new System.Drawing.Size(0, 20);
             this.resultAmountLabel.TabIndex = 10;
             // 
             // MainWindow
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 617);
+            this.ClientSize = new System.Drawing.Size(1390, 823);
             this.Controls.Add(this.resultAmountLabel);
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.torahMatchesListBox);
@@ -163,6 +170,7 @@ namespace GemateriaAssignment
             this.Controls.Add(this.withKollelCheckBox);
             this.Controls.Add(this.numberResultTextBox);
             this.Controls.Add(this.inputTextBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainWindow";
             this.Text = "Results:";
             this.ResumeLayout(false);
