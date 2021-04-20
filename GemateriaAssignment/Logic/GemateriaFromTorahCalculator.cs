@@ -12,15 +12,16 @@ namespace GemateriaAssignment.FindMatches
        
         public IEnumerable<string> GetAllGematrios(int sum)
         {
-            string filePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\torah";
-
-            Directory.CreateDirectory(filePath);
-            WriteResourceToFile("GemateriaAssignment.TorahText.Torah.numbers.txt", filePath + "\\numbers.txt");
-            WriteResourceToFile("GemateriaAssignment.TorahText.Torah.hebrew.txt", filePath + "\\hebrew.txt");
-            CleanUpHebrewText(filePath + "\\hebrew.txt");
+            string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\torah";
+            bool needFilesExist = File.Exists(folderPath + "\\hebrew.txt") && File.Exists(folderPath + "\\numbers");
+            
+            if (!needFilesExist)
+                CreateNeededFilesForCalculatingTorahGemateria(folderPath);
+            
+            
             FindGemateriaMatches gemateriaMatches = new FindGemateriaMatches();
 
-            IEnumerable<string> matches = gemateriaMatches.GetAllInctancesOfGemateriaInFile(filePath, sum);
+            IEnumerable<string> matches = gemateriaMatches.GetAllInstancesOfGemateriaInFile(folderPath, sum);
 
             return matches;
             
@@ -31,6 +32,14 @@ namespace GemateriaAssignment.FindMatches
             string text = File.ReadAllText(filePath);
             text = text.Replace("\r", " ");
             File.WriteAllText(filePath, text);
+        }
+
+        private void CreateNeededFilesForCalculatingTorahGemateria(string folderPath)
+        {
+            Directory.CreateDirectory(folderPath);
+            WriteResourceToFile("GemateriaAssignment.TorahText.Torah.numbers.txt", folderPath + "\\numbers.txt");
+            WriteResourceToFile("GemateriaAssignment.TorahText.Torah.hebrew.txt", folderPath + "\\hebrew.txt");
+            CleanUpHebrewText(folderPath + "\\hebrew.txt");
         }
         private void WriteResourceToFile(string resourceName, string filePath)
         {

@@ -91,7 +91,7 @@ namespace GemateriaTests
             string folderPath = @"C:\Users\morde\Desktop\torahText\bereishis";
             string[] expected = new string[] { "החשך ויקרא אלהים לאור יום" };
             int sum = 1029;
-            string[] result = findGemateriaInTextFile.GetAllInctancesOfGemateriaInFile(folderPath, sum).ToArray();
+            string[] result = findGemateriaInTextFile.GetAllInstancesOfGemateriaInFile(folderPath, sum).ToArray();
 
             Assert.AreEqual(expected[0], result[0]);
         }
@@ -108,10 +108,11 @@ namespace GemateriaTests
         [Test]
         public void Get_All_Equal_Words_From_Torah_Test()
         {
-            int sum = 20000;
+            int sum = 10;
             GemateriaFromTorahCalculator torahFinder = new GemateriaFromTorahCalculator();
             IEnumerable<string> result = torahFinder.GetAllGematrios(sum);
 
+            Assert.IsTrue(result.Any());
             foreach (var str in result)
             {
                 long total = new GemateriaCalculator().CalculateGemateria(str);
