@@ -9,7 +9,7 @@ namespace GemateriaAssignment.FindMatches
     public class FindGemateriaMatches
     {
         /// <summary>
-        /// Returns all instances of consecutive numbers that add up to a sum
+        /// Returns all instances of consecutive numbers that add up to <paramref name="sum"/>
         /// </summary>
         /// <param name="numbers"></param>
         /// <param name="sum"></param>
@@ -99,6 +99,17 @@ namespace GemateriaAssignment.FindMatches
             return indexCount;
         }
 
+        /// <summary>
+        /// Gets all instances of hebrew words in a file,that their numerical values add up to the sum
+        /// </summary>
+        /// <param name="folderPath">Path to a folder that contains 2 files, one should be names hebrew.txt, 
+        /// the other one should be named numbers.txt. The hebrew.txt file should contain only hebrew words, the numbers.txt should contain only numbers 
+        /// that represent the numerical value of the hebrew words in hebrew.txt.
+        /// The numbers should be in the same order as the words in the hebrew.txt file, separated with a space for each word
+        /// Ex: hebrew.txt contains the phrase "ואני את אותו" the numbers.txt should contain "67 401 413" which is the numerical equivelent to the phrase in
+        /// the hebrew file</param>
+        /// <param name="sum">The number to calculate</param>
+        /// <returns>Collection of strings where each string has the same numerical value as the <paramref name="sum"/></returns>
         public IEnumerable<string> GetAllInctancesOfGemateriaInFile(string folderPath, int sum)
         {
             string numberFile = File.ReadAllText(folderPath + "\\numbers.txt");
