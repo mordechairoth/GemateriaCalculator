@@ -27,19 +27,11 @@ namespace GemateriaAssignment.FindMatches
             
         }
 
-        private void  CleanUpHebrewText(string filePath)
-        {
-            string text = File.ReadAllText(filePath);
-            text = text.Replace("\r", " ");
-            File.WriteAllText(filePath, text);
-        }
-
         private void CreateNeededFilesForCalculatingTorahGemateria(string folderPath)
         {
             Directory.CreateDirectory(folderPath);
             WriteResourceToFile("GemateriaAssignment.TorahText.Torah.numbers.txt", folderPath + "\\numbers.txt");
             WriteResourceToFile("GemateriaAssignment.TorahText.Torah.hebrew.txt", folderPath + "\\hebrew.txt");
-            CleanUpHebrewText(folderPath + "\\hebrew.txt");
         }
         private void WriteResourceToFile(string resourceName, string filePath)
         {
